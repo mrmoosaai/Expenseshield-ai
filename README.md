@@ -90,6 +90,7 @@ Enterprise-grade audit trail with cryptographic integrity protection:
 ```text
 expenseshield-ai/
 ├── config.py                  # Global configuration
+...
 ├── agent.py                   # Main system orchestrator
 ├── requirement.txt           # Dependencies
 ├── requirements.txt          # Compatibility alias for dependencies
