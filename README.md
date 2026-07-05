@@ -54,6 +54,31 @@ This submission presents a secure, multi-agent expense review system for the Age
 │ (Generates branded PDFs and encrypted email alerts)    │
 └─────────────────────────────────────────────────────────┘
 ```
+## 🔐 Tamper-Proof Audit Logging
+
+Enterprise-grade audit trail with cryptographic integrity protection:
+
+### Features
+- **HMAC-SHA256 Signing**: Every log entry is cryptographically signed
+- **Tamper Detection**: Any modification to logs is immediately detected
+- **CSV + JSON Format**: Dual-format storage for flexibility
+- **CLI Verification Tool**: Built-in integrity checker
+- **Transaction Tracking**: Unique IDs for every expense decision
+
+### Audit Log Structure
+```json
+{
+  "timestamp": "2026-07-05T14:12:27.789147",
+  "transaction_id": "20260705141227789147-EXP001",
+  "agent_name": "Security Agent",
+  "expense_id": "EXP001",
+  "amount": "500",
+  "category": "Engineering",
+  "decision": "APPROVED",
+  "reason": "Security screening passed",
+  "hash": "1fc7f39a20f54ec568e9f732e5714868ed2eb411a0da2cf58448bffb57428ee"
+}
+
 
 *Note: Internal processing modules are abstracted to maintain enterprise security standards.*
 
