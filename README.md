@@ -87,70 +87,69 @@ Enterprise-grade audit trail with cryptographic integrity protection:
 
 ## 📁 Project Structure
 
-```
+```text
 expenseshield-ai/
-├── config.py                    # Global configuration
-├── agent.py                     # Main system orchestrator
-├── requirement.txt             # Dependencies
-├── requirements.txt            # Compatibility alias for dependencies
-├── .env.example                # Sample environment variables
-├── .env                        # Environment variables (SECRET)
-├── .gitignore                   # Git ignore rules
-├── LICENSE                      # MIT License
-├── README.md                    # This file
+├── config.py                  # Global configuration
+├── agent.py                   # Main system orchestrator
+├── requirement.txt           # Dependencies
+├── requirements.txt          # Compatibility alias for dependencies
+├── .env.example              # Sample environment variables
+├── .env                      # Environment variables (SECRET)
+├── .gitignore                 # Git ignore rules
+├── LICENSE                    # MIT License
+├── README.md                  # This file
 │
-├── ambient/                     # Server layer
+├── ambient/                   # Server layer
 │   ├── __init__.py
-│   └── fast_api_app.py          # FastAPI endpoints
+│   └── fast_api_app.py        # FastAPI endpoints
 │
-├── security/                    # Security layer
+├── security/                  # Security layer
 │   ├── __init__.py
-│   ├── shield.py                # Master security shield
-│   ├── pii_redactor.py          # Personal data protection
-│   └── injection_defense.py     # Malicious input prevention
+│   ├── shield.py              # Master security shield
+│   ├── pii_redactor.py        # Personal data protection
+│   └── injection_defense.py   # Malicious input prevention
 │
-├── agents/                      # Multi-agent system
+├── agents/                    # Multi-agent system
 │   ├── __init__.py
-│   ├── base_agent.py            # Base agent class
-│   ├── orchestrator_agent.py    # Master coordinator
-│   ├── security_agent.py        # Security specialist
-│   ├── finance_agent.py         # Budget validator
-│   └── skill_agent.py           # Dynamic skill loader
+│   ├── base_agent.py          # Base agent class
+│   ├── orchestrator_agent.py  # Master coordinator
+│   ├── security_agent.py      # Security specialist
+│   ├── finance_agent.py       # Budget validator
+│   └── skill_agent.py         # Dynamic skill loader
 │
-├── sandbox/                     # Code execution safety
+├── sandbox/                   # Code execution safety
 │   ├── __init__.py
-│   ├── safe_evaluator.py        # AST-based safety checks
-│   └── code_runner.py           # Restricted execution
+│   ├── safe_evaluator.py      # AST-based safety checks
+│   └── code_runner.py         # Restricted execution
 │
-├── workflow/                    # Decision logic
+├── workflow/                  # Decision logic
 │   ├── __init__.py
-│   ├── nodes.py                 # Decision handlers
-│   ├── edges.py                 # Routing logic
-│   └── graph.py                 # Workflow orchestrator
+│   ├── nodes.py               # Decision handlers
+│   ├── edges.py               # Routing logic
+│   └── graph.py               # Workflow orchestrator
 │
-├── database/                    # Data storage
+├── database/                  # Data storage
 │   ├── __init__.py
-│   ├── connection.py            # SQLite connection
-│   └── repository.py            # CRUD operations
+│   ├── connection.py          # SQLite connection
+│   └── repository.py          # CRUD operations
 │
-├── notifications/               # Communication
+├── notifications/             # Communication
 │   ├── __init__.py
-│   ├── email_service.py         # SMTP email sender
-│   └── pdf_generator.py         # Professional PDF creator
+│   ├── email_service.py       # SMTP email sender
+│   └── pdf_generator.py       # Professional PDF creator
 │
-├── monitoring/                  # Observability
+├── monitoring/                # Observability
 │   ├── __init__.py
-│   ├── logger.py                # Activity logging
-│   └── metrics.py               # Performance metrics
+│   ├── logger.py              # Activity logging
+│   └── metrics.py             # Performance metrics
 │
-└── skills/                      # AI capabilities
+└── skills/                    # AI capabilities
     ├── __init__.py
-    ├── loader.py                # Dynamic skill loader
+    ├── loader.py              # Dynamic skill loader
     ├── git-commit-formatter/
     ├── license-header-adder/
     ├── json-to-pydantic/
     └── database-validator/
-```
 
 ---
 
