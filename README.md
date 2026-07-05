@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Security](https://img.shields.io/badge/Security-Enterprise%20Grade-green.svg)]()
 
+
 **Enterprise-Grade Automated Expense Approval & Security System**
 
 ExpenseShield AI is a security-first expense management system that processes expense requests with compliance verification, intelligent routing, and professional audit reporting. The project is designed for safe demo and research use, with redaction and secure report generation built into the workflow.
@@ -54,6 +55,7 @@ This submission presents a secure, multi-agent expense review system for the Age
 │ (Generates branded PDFs and encrypted email alerts)    │
 └─────────────────────────────────────────────────────────┘
 ```
+
 ## 🔐 Tamper-Proof Audit Logging
 
 Enterprise-grade audit trail with cryptographic integrity protection:
@@ -79,19 +81,20 @@ Enterprise-grade audit trail with cryptographic integrity protection:
   "hash": "1fc7f39a20f54ec568e9f732e5714868ed2eb411a0da2cf58448bffb57428ee"
 }
 
-
 *Note: Internal processing modules are abstracted to maintain enterprise security standards.*
 
 ---
 
 ## 📁 Project Structure
 
-```text
+```
 expenseshield-ai/
 ├── config.py                    # Global configuration
 ├── agent.py                     # Main system orchestrator
-├── requirements.txt             # Dependencies
-├── .env.example                 # Sample environment variables
+├── requirement.txt             # Dependencies
+├── requirements.txt            # Compatibility alias for dependencies
+├── .env.example                # Sample environment variables
+├── .env                        # Environment variables (SECRET)
 ├── .gitignore                   # Git ignore rules
 ├── LICENSE                      # MIT License
 ├── README.md                    # This file
@@ -104,7 +107,7 @@ expenseshield-ai/
 │   ├── __init__.py
 │   ├── shield.py                # Master security shield
 │   ├── pii_redactor.py          # Personal data protection
-│   ── injection_defense.py     # Malicious input prevention
+│   └── injection_defense.py     # Malicious input prevention
 │
 ├── agents/                      # Multi-agent system
 │   ├── __init__.py
@@ -307,6 +310,31 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Mr Moosa AI** - Built with ❤️ as an enterprise-grade learning project
+
+- Email: mrmoosaai09@gmail.com
+- GitHub: [Your GitHub Profile](https://github.com)
+- LinkedIn: [Your LinkedIn Profile](https://linkedin.com)
+
+---
+
+## 🙏 Acknowledgments
+
+- Google Gemini API for AI capabilities
+- FastAPI team for the amazing framework
+- The AI agent development community
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you found it helpful! ⭐**
+
+Made with 🚀 by Mr Moosa AI
+
+**ExpenseShield AI - Enterprise Expense Security & Approval System**
+
+</div>
+
 
 - Email: mrmoosaai09@gmail.com
 - GitHub: https://github.com/mrmoosaai
