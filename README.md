@@ -86,14 +86,12 @@ Enterprise-grade audit trail with cryptographic integrity protection:
 
 ## 📁 Project Structure
 
-```
+```text
 expenseshield-ai/
 ├── config.py                    # Global configuration
 ├── agent.py                     # Main system orchestrator
-├── requirement.txt             # Dependencies
-├── requirements.txt            # Compatibility alias for dependencies
-├── .env.example                # Sample environment variables
-├── .env                        # Environment variables (SECRET)
+├── requirements.txt             # Dependencies
+├── .env.example                 # Sample environment variables
 ├── .gitignore                   # Git ignore rules
 ├── LICENSE                      # MIT License
 ├── README.md                    # This file
@@ -106,7 +104,7 @@ expenseshield-ai/
 │   ├── __init__.py
 │   ├── shield.py                # Master security shield
 │   ├── pii_redactor.py          # Personal data protection
-│   └── injection_defense.py     # Malicious input prevention
+│   ── injection_defense.py     # Malicious input prevention
 │
 ├── agents/                      # Multi-agent system
 │   ├── __init__.py
