@@ -1,0 +1,10 @@
+{
+  "user_id": 12345,
+  "username": "moosa_ai",
+  "is_active": true,
+  "preferences": {
+    "theme": "dark",
+    "notifications": ["email", "push"]
+  },
+  "last_login": "2026-06-26T20:30:00Z"
+}
