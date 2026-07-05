@@ -286,9 +286,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Mr Moosa AI** - Built with ❤️ as an enterprise-grade learning project
 
 - Email: mrmoosaai09@gmail.com
-- GitHub: [Your GitHub Profile](https://github.com)
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com)
-
+- GitHub: https://github.com/mrmoosaai
+- LinkedIn: https://www.linkedin.com/in/mr-moosa-ai-moosa-sohail-khan-b0119440a 
 ---
 
 ## 🙏 Acknowledgments
