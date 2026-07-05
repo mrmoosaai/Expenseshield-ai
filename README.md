@@ -5,7 +5,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Security](https://img.shields.io/badge/Security-Enterprise%20Grade-green.svg)]()
 
-
 **Enterprise-Grade Automated Expense Approval & Security System**
 
 ExpenseShield AI is a security-first expense management system that processes expense requests with compliance verification, intelligent routing, and professional audit reporting. The project is designed for safe demo and research use, with redaction and secure report generation built into the workflow.
@@ -56,101 +55,76 @@ This submission presents a secure, multi-agent expense review system for the Age
 └─────────────────────────────────────────────────────────┘
 ```
 
-## 🔐 Tamper-Proof Audit Logging
-
-Enterprise-grade audit trail with cryptographic integrity protection:
-
-### Features
-- **HMAC-SHA256 Signing**: Every log entry is cryptographically signed
-- **Tamper Detection**: Any modification to logs is immediately detected
-- **CSV + JSON Format**: Dual-format storage for flexibility
-- **CLI Verification Tool**: Built-in integrity checker
-- **Transaction Tracking**: Unique IDs for every expense decision
-
-### Audit Log Structure
-```json
-{
-  "timestamp": "2026-07-05T14:12:27.789147",
-  "transaction_id": "20260705141227789147-EXP001",
-  "agent_name": "Security Agent",
-  "expense_id": "EXP001",
-  "amount": "500",
-  "category": "Engineering",
-  "decision": "APPROVED",
-  "reason": "Security screening passed",
-  "hash": "1fc7f39a20f54ec568e9f732e5714868ed2eb411a0da2cf58448bffb57428ee"
-}
-
 *Note: Internal processing modules are abstracted to maintain enterprise security standards.*
 
 ---
 
 ## 📁 Project Structure
 
-```text
+```
 expenseshield-ai/
-├── config.py                  # Global configuration
-...
-├── agent.py                   # Main system orchestrator
-├── requirement.txt           # Dependencies
-├── requirements.txt          # Compatibility alias for dependencies
-├── .env.example              # Sample environment variables
-├── .env                      # Environment variables (SECRET)
-├── .gitignore                 # Git ignore rules
-├── LICENSE                    # MIT License
-├── README.md                  # This file
+├── config.py                    # Global configuration
+├── agent.py                     # Main system orchestrator
+├── requirement.txt             # Dependencies
+├── requirements.txt            # Compatibility alias for dependencies
+├── .env.example                # Sample environment variables
+├── .env                        # Environment variables (SECRET)
+├── .gitignore                   # Git ignore rules
+├── LICENSE                      # MIT License
+├── README.md                    # This file
 │
-├── ambient/                   # Server layer
+├── ambient/                     # Server layer
 │   ├── __init__.py
-│   └── fast_api_app.py        # FastAPI endpoints
+│   └── fast_api_app.py          # FastAPI endpoints
 │
-├── security/                  # Security layer
+├── security/                    # Security layer
 │   ├── __init__.py
-│   ├── shield.py              # Master security shield
-│   ├── pii_redactor.py        # Personal data protection
-│   └── injection_defense.py   # Malicious input prevention
+│   ├── shield.py                # Master security shield
+│   ├── pii_redactor.py          # Personal data protection
+│   └── injection_defense.py     # Malicious input prevention
 │
-├── agents/                    # Multi-agent system
+├── agents/                      # Multi-agent system
 │   ├── __init__.py
-│   ├── base_agent.py          # Base agent class
-│   ├── orchestrator_agent.py  # Master coordinator
-│   ├── security_agent.py      # Security specialist
-│   ├── finance_agent.py       # Budget validator
-│   └── skill_agent.py         # Dynamic skill loader
+│   ├── base_agent.py            # Base agent class
+│   ├── orchestrator_agent.py    # Master coordinator
+│   ├── security_agent.py        # Security specialist
+│   ├── finance_agent.py         # Budget validator
+│   └── skill_agent.py           # Dynamic skill loader
 │
-├── sandbox/                   # Code execution safety
+├── sandbox/                     # Code execution safety
 │   ├── __init__.py
-│   ├── safe_evaluator.py      # AST-based safety checks
-│   └── code_runner.py         # Restricted execution
+│   ├── safe_evaluator.py        # AST-based safety checks
+│   └── code_runner.py           # Restricted execution
 │
-├── workflow/                  # Decision logic
+├── workflow/                    # Decision logic
 │   ├── __init__.py
-│   ├── nodes.py               # Decision handlers
-│   ├── edges.py               # Routing logic
-│   └── graph.py               # Workflow orchestrator
+│   ├── nodes.py                 # Decision handlers
+│   ├── edges.py                 # Routing logic
+│   └── graph.py                 # Workflow orchestrator
 │
-├── database/                  # Data storage
+├── database/                    # Data storage
 │   ├── __init__.py
-│   ├── connection.py          # SQLite connection
-│   └── repository.py          # CRUD operations
+│   ├── connection.py            # SQLite connection
+│   └── repository.py            # CRUD operations
 │
-├── notifications/             # Communication
+├── notifications/               # Communication
 │   ├── __init__.py
-│   ├── email_service.py       # SMTP email sender
-│   └── pdf_generator.py       # Professional PDF creator
+│   ├── email_service.py         # SMTP email sender
+│   └── pdf_generator.py         # Professional PDF creator
 │
-├── monitoring/                # Observability
+├── monitoring/                  # Observability
 │   ├── __init__.py
-│   ├── logger.py              # Activity logging
-│   └── metrics.py             # Performance metrics
+│   ├── logger.py                # Activity logging
+│   └── metrics.py               # Performance metrics
 │
-└── skills/                    # AI capabilities
+└── skills/                      # AI capabilities
     ├── __init__.py
-    ├── loader.py              # Dynamic skill loader
+    ├── loader.py                # Dynamic skill loader
     ├── git-commit-formatter/
     ├── license-header-adder/
     ├── json-to-pydantic/
     └── database-validator/
+```
 
 ---
 
@@ -315,30 +289,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - GitHub: [Your GitHub Profile](https://github.com)
 - LinkedIn: [Your LinkedIn Profile](https://linkedin.com)
 
----
-
-## 🙏 Acknowledgments
-
-- Google Gemini API for AI capabilities
-- FastAPI team for the amazing framework
-- The AI agent development community
-
----
-
-<div align="center">
-
-**⭐ Star this repo if you found it helpful! ⭐**
-
-Made with 🚀 by Mr Moosa AI
-
-**ExpenseShield AI - Enterprise Expense Security & Approval System**
-
-</div>
-
-
-- Email: mrmoosaai09@gmail.com
-- GitHub: https://github.com/mrmoosaai
-- LinkedIn: https://www.linkedin.com/in/mr-moosa-ai-moosa-sohail-khan-b0119440a 
 ---
 
 ## 🙏 Acknowledgments
