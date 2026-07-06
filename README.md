@@ -3,11 +3,11 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.138+-009688.svg)](https://fastapi.tiangolo.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Security](https://img.shields.io/badge/Security-Enterprise%20Grade-green.svg)]()
- 
-   **Enterprise-Grade Automated Expense Approval & Security System**
+[![Security](https://img.shields.io/badge/Security-Guardrails-green.svg)]()
 
-ExpenseShield AI is a security-first expense management system that processes expense requests with compliance verification, intelligent routing, and professional audit reporting. The project is designed for safe demo and research use, with redaction and secure report generation built into the workflow.
+**Secure Multi-Agent Expense Review for Demo and Research**
+
+ExpenseShield AI is a security-focused expense review system that processes expense requests with redaction, policy checks, routing, and report generation. The project is designed for safe demo and research use, with a layered guardrail approach before any decision reaches the model.
 
 ## Kaggle Submission Summary
 
@@ -17,14 +17,14 @@ This submission presents a secure, multi-agent expense review system for the Age
 
 ## ✨ Key Features
 
-- 🛡️ **Zero-Trust Security** - Advanced PII redaction + Prompt injection defense
-- ⚡ **High-Speed Processing** - Sub-2-second approval times for standard requests
-- 📊 **Automated Compliance** - Verifies data integrity and corporate policy adherence
-- 📧 **Professional Reporting** - Generates secure, branded PDF audit trails without exposing internal workflow details
-- 🔒 **Pre-Processing Screening** - Blocks malicious inputs before processing
-- 📈 **Built-in Observability** - Comprehensive logging and metrics tracking
-- 🌐 **Always-On Server** - FastAPI-based ambient event system
-- 🎯 **Human-in-the-Loop** - Manager approval for high-value decisions
+- 🛡️ **Security Screening** - PII redaction and prompt-injection defense before model processing
+- ⚡ **Fast Routing** - Routes low-risk requests quickly and escalates higher-risk cases for review
+- 📊 **Policy Checks** - Verifies data integrity and basic corporate-policy conditions
+- 📧 **Structured Reporting** - Generates audit-friendly summaries and PDF outputs for reviewed cases
+- 🔒 **Pre-Processing Guardrails** - Blocks suspicious inputs before workflow execution
+- 📈 **Observability** - Logging and metrics tracking for review and debugging
+- 🌐 **Ambient Server** - FastAPI-based event interface for local and demo use
+- 🎯 **Human Review** - Manager approval for high-value or sensitive decisions
 
 ---
 
@@ -32,66 +32,41 @@ This submission presents a secure, multi-agent expense review system for the Age
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│ 1. SECURE INPUT GATEWAY                                 │
-│ (Validates and sanitizes incoming expense requests)    │
+│ Incoming Expense Request                               │
 └───────────────────────┬─────────────────────────────────┘
                         │
                         ▼
 ┌─────────────────────────────────────────────────────────┐
-│ 2. COMPLIANCE & RISK ENGINE                             │
-│ (Checks corporate policies, fraud detection, limits)   │
-└───────────────────────┬─────────────────────────────────┘
-                        │
-                        ▼
+│ Orchestrator Agent                                     │
+│ Routes the request to specialized agents               │
+└───────────────┬───────────────────────┬────────────────┘
+                │                       │
+                ▼                       ▼
+┌───────────────────────┐   ┌────────────────────────────┐
+│ Security Agent        │   │ Finance Agent              │
+│ PII redaction +      │   │ Risk, policy, and budget  │
+│ injection defense     │   │ checks                     │
+└──────────┬────────────┘   └────────────┬───────────────┘
+           │                              │
+           └──────────────┬───────────────┘
+                          ▼
 ┌─────────────────────────────────────────────────────────┐
-│ 3. AUTOMATED DECISION MATRIX                            │
-│ (Approves, flags for review, or rejects securely)      │
-└───────────────────────┬─────────────────────────────────┘
-                        │
-                        ▼
-┌─────────────────────────────────────────────────────────┐
-│ 4. SECURE AUDIT & REPORTING                             │
-│ (Generates branded PDFs and encrypted email alerts)    │
+│ Skill Agent + Reporting                                │
+│ Validations, formatting, PDF, and audit output         │
 └─────────────────────────────────────────────────────────┘
-
-*Note: Internal processing modules are abstracted to maintain enterprise security standards.*
-
----
-
-## 🔐 Tamper-Proof Audit Logging
-
-Enterprise-grade audit trail with cryptographic integrity protection:
-
-### Features
-- **HMAC-SHA256 Signing**: Every log entry is cryptographically signed
-- **Tamper Detection**: Any modification to logs is immediately detected
-- **CSV + JSON Format**: Dual-format storage for flexibility
-- **CLI Verification Tool**: Built-in integrity checker
-- **Transaction Tracking**: Unique IDs for every expense decision
-
-### Audit Log Structure
-```json
-{
-  "timestamp": "2026-07-05T14:12:27.789147",
-  "transaction_id": "20260705141227789147-EXP001",
-  "agent_name": "Security Agent",
-  "expense_id": "EXP001",
-  "amount": "500",
-  "category": "Engineering",
-  "decision": "APPROVED",
-  "reason": "Security screening passed",
-  "hash": "1fc7f39a20f54ec568e9f732e5714868ed2eb411a0da2cf58448bffb57428ee"
-}
 ```
+
+*Note: The layout reflects the current multi-agent workflow used in the project.*
+
 ---
 
 ## 📁 Project Structure
 
 ```
-expenseshield-ai/
+expense-agent/
 ├── config.py                    # Global configuration
 ├── agent.py                     # Main system orchestrator
-├── requirements.txt             # Dependencies
+├── requirements.txt            # Dependencies
 ├── .env.example                # Sample environment variables
 ├── .gitignore                   # Git ignore rules
 ├── LICENSE                      # MIT License
@@ -139,7 +114,7 @@ expenseshield-ai/
 ├── monitoring/                  # Observability
 │   ├── __init__.py
 │   ├── logger.py                # Activity logging
-│   └── metrics.py               # Design Targets & Benchmarks
+│   └── metrics.py               # Performance tracking
 │
 └── skills/                      # AI capabilities
     ├── __init__.py
@@ -158,8 +133,8 @@ expenseshield-ai/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/expenseshield-ai.git
-cd expenseshield-ai
+git clone https://github.com/mrmoosaai/expense-agent.git
+cd expense-agent
 
 # Create virtual environment
 python -m venv .venv
@@ -171,8 +146,7 @@ python -m venv .venv
 source .venv/bin/activate
 
 # Install dependencies
-pip install -r requirement.txt
-# or: pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 2️⃣ Configuration
@@ -243,12 +217,12 @@ curl.exe -i -X POST http://localhost:8880/trigger/pubsub `
 
 ---
 
-## 📊 Performance Metrics
+## 📊 Performance Targets
 
-- **Average Processing Time**: < 2 seconds
-- **Approval Accuracy**: 99.8%
-- **False Positive Rate**: 0.2%
-- **System Uptime**: 99.99%
+- **Typical processing time**: under 2 seconds for low-risk requests
+- **Review coverage**: high-value or suspicious cases are routed for human review
+- **Safety posture**: PII is redacted and prompt-injection inputs are blocked before model processing
+- **Reporting**: audit-friendly summaries and PDF outputs are generated for reviewed cases
 
 ---
 
@@ -307,12 +281,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Mr Moosa AI** - Built with ❤️ as an enterprise-grade learning project
+**Mr Moosa AI** - Built for secure demo and research use
 
 - Email: mrmoosaai09@gmail.com
-- GitHub: [Your GitHub Profile](https://github.com)
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com)
-
+- GitHub: https://github.com/mrmoosaai
+- LinkedIn: https://www.linkedin.com/in/mr-moosa-ai-moosa-sohail-khan-b0119440a 
 ---
 
 ## 🙏 Acknowledgments
@@ -329,6 +302,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Made with 🚀 by Mr Moosa AI
 
-**ExpenseShield AI - Enterprise Expense Security & Approval System**
+**ExpenseShield AI - Secure Multi-Agent Expense Review**
 
 </div>
