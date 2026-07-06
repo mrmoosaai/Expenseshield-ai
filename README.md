@@ -3,8 +3,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.138+-009688.svg)](https://fastapi.tiangolo.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Security](https://img.shields.io/badge/Security-Enterprise%20Grade-green.svg)]()
-
+[![Security](https://img.shields.io/badge/Security
 **Enterprise-Grade Automated Expense Approval & Security System**
 
 ExpenseShield AI is a security-first expense management system that processes expense requests with compliance verification, intelligent routing, and professional audit reporting. The project is designed for safe demo and research use, with redaction and secure report generation built into the workflow.
