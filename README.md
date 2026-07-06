@@ -92,7 +92,6 @@ expenseshield-ai/
 ├── config.py                    # Global configuration
 ├── agent.py                     # Main system orchestrator
 ├── requirements.txt             # Dependencies
-├── requirements.txt            # Compatibility alias for dependencies
 ├── .env.example                # Sample environment variables
 ├── .gitignore                   # Git ignore rules
 ├── LICENSE                      # MIT License
