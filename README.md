@@ -94,7 +94,6 @@ expenseshield-ai/
 ├── requirements.txt             # Dependencies
 ├── requirements.txt            # Compatibility alias for dependencies
 ├── .env.example                # Sample environment variables
-├── .env                        # Environment variables (SECRET)
 ├── .gitignore                   # Git ignore rules
 ├── LICENSE                      # MIT License
 ├── README.md                    # This file
@@ -141,7 +140,7 @@ expenseshield-ai/
 ├── monitoring/                  # Observability
 │   ├── __init__.py
 │   ├── logger.py                # Activity logging
-│   └── metrics.py               # Performance metrics
+│   └── metrics.py               # Design Targets & Benchmarks
 │
 └── skills/                      # AI capabilities
     ├── __init__.py
